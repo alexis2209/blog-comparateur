@@ -1,0 +1,39 @@
+old_sound_rabbit_mq:
+    connections:
+        default:
+            host:     'localhost'
+            port:     5672
+            user:     'guest'
+            password: 'guest'
+            vhost:    '/'
+            lazy:     false
+            connection_timeout: 3
+            read_write_timeout: 3
+    producers:
+        betradar_live:
+            connection:       default
+            exchange_options: {name: 'live', type: direct}
+            queue_options: {name:'live'}
+        betradar_dispatcher:
+            connection:       default
+            exchange_options: {name: 'dispatcher', type: direct}
+            queue_options: {name:'dispatcher'}
+    consumers:
+        betradar_live:
+           connection: default
+           exchange_options:
+              name: 'live'
+              type: direct
+           queue_options:
+              name: 'live'
+           callback: 'app.consumer.betradar.live'
+           enable_logger: true
+        betradar_dispatcher:
+           connection: default
+           exchange_options:
+              name: 'dispatcher'
+              type: direct
+           queue_options:
+              name: 'dispatcher'
+           callback: 'app.consumer.betradar.dispatcher'
+           enable_logger: true

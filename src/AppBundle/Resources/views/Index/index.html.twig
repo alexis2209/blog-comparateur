@@ -1,0 +1,670 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block breadcrumbs %}
+    <!-- Page Heading & Breadcrumbs  -->
+    <div class="page-heading-breadcrumbs">
+        <div class="container">
+            <h2>Blog</h2>
+            <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li>Blog</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Page Heading & Breadcrumbs  -->
+{% endblock %}
+
+{% block content %}
+    <!-- Blog -->
+    <div class="theme-padding white-bg">
+        <div class="container">
+            <div class="row">
+
+                <!-- Aside -->
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 r-full-width">
+
+                    <!-- Search Bar -->
+                    <div class="aside-search-bar">
+                        <input class="form-control" type="text" placeholder="Search...">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                    <!-- Search Bar -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <h3><span>Top Categories</span></h3>
+                        <div class="top-categories">
+                            <nav class="nav" role="navigation">
+                                <ul class="nav__list">
+                                    <li>
+                                        <input id="group-1" type="checkbox" hidden />
+                                        <label for="group-1"><span class="fa fa-angle-right"></span> First level</label>
+                                        <ul class="group-list">
+                                            <li><a href="#">1st level item</a></li>
+                                            <li>
+                                                <input id="sub-group-1" type="checkbox" hidden />
+                                                <label for="sub-group-1"><span class="fa fa-angle-right"></span> Second level</label>
+                                                <ul class="sub-group-list">
+                                                    <li><a href="#">2nd level nav item</a></li>
+                                                    <li><a href="#">2nd level nav item</a></li>
+                                                    <li><a href="#">2nd level nav item</a></li>
+                                                    <li>
+                                                        <input id="sub-sub-group-1" type="checkbox" hidden />
+                                                        <label for="sub-sub-group-1"><span class="fa fa-angle-right"></span> Third level</label>
+                                                        <ul class="sub-sub-group-list">
+                                                            <li><a href="#">3rd level nav item</a></li>
+                                                            <li><a href="#">3rd level nav item</a></li>
+                                                            <li><a href="#">3rd level nav item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input id="group-2" type="checkbox" hidden />
+                                        <label for="group-2"><span class="fa fa-angle-right"></span> First level</label>
+                                        <ul class="group-list">
+                                            <li>
+                                            <li><a href="#">1st level item</a></li>
+                                            <li><a href="#">1st level item</a></li>
+                                            <input id="sub-group-2" type="checkbox" hidden />
+                                            <label for="sub-group-2"><span class="fa fa-angle-right"></span> Second level</label>
+                                            <ul class="sub-group-list">
+                                                <li><a href="#">2nd level nav item</a></li>
+                                                <li><a href="#">2nd level nav item</a></li>
+                                                <li>
+                                                    <input id="sub-sub-group-2" type="checkbox" hidden />
+                                                    <label for="sub-sub-group-2"><span class="fa fa-angle-right"></span> Third level</label>
+                                                    <ul class="sub-sub-group-list">
+                                                        <li><a href="#">3rd level nav item</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input id="group-3" type="checkbox" hidden />
+                                        <label for="group-3"><span class="fa fa-angle-right"></span> First level</label>
+                                        <ul class="group-list">
+                                            <li>
+                                            <li><a href="#">1st level item</a></li>
+                                            <li><a href="#">1st level item</a></li>
+                                            <input id="sub-group-3" type="checkbox" hidden />
+                                            <label for="sub-group-3"><span class="fa fa-angle-right"></span> Second level</label>
+                                            <ul class="sub-group-list">
+                                                <li><a href="#">2nd level nav item</a></li>
+                                                <li><a href="#">2nd level nav item</a></li>
+                                                <li><a href="#">2nd level nav item</a></li>
+                                                <li>
+                                                    <input id="sub-sub-group-3" type="checkbox" hidden />
+                                                    <label for="sub-sub-group-3"><span class="fa fa-angle-right"></span> Third level</label>
+                                                    <ul class="sub-sub-group-list">
+                                                        <li><a href="#">3rd level nav item</a></li>
+                                                        <li><a href="#">3rd level nav item</a></li>
+                                                        <li><a href="#">3rd level nav item</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <input id="group-4" type="checkbox" hidden />
+                                        <label for="group-4"><span class="fa fa-angle-right"></span> First level</label>
+                                        <ul class="group-list">
+                                            <li>
+                                            <li><a href="#">1st level item</a></li>
+                                            <input id="sub-group-4" type="checkbox" hidden />
+                                            <label for="sub-group-4"><span class="fa fa-angle-right"></span> Second level</label>
+                                            <ul class="sub-group-list">
+                                                <li><a href="#">2nd level nav item</a></li>
+                                                <li><a href="#">2nd level nav item</a></li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <ul>
+                                <li><a href="#">Cricket</a></li>
+                                <li><a href="#">Football</a></li>
+                                <li><a href="#">Hockey</a></li>
+                                <li><a href="#">Tennis</a></li>
+                                <li><a href="#">Basketball</a></li>
+                                <li><a href="#">Baseball</a></li>
+                                <li><a href="#">Golf</a></li>
+                                <li><a href="#">Cycling</a></li>
+                                <li><a href="#">Motorsports</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Aside Widget -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <h3><span>Popular News</span></h3>
+                        <div class="Popular-news">
+                            <ul>
+                                <li>
+                                    <img src="images/popular-news/img-01.jpg" alt="">
+                                    <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                                    <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+                                </li>
+                                <li>
+                                    <img src="images/popular-news/img-02.jpg" alt="">
+                                    <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                                    <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+                                </li>
+                                <li>
+                                    <img src="images/popular-news/img-03.jpg" alt="">
+                                    <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                                    <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+                                </li>
+                                <li>
+                                    <img src="images/popular-news/img-04.jpg" alt="">
+                                    <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                                    <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Aside Widget -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <div class="aside-post">
+
+                            <!-- Post Img -->
+                            <div class="large-post-img video-post">
+                                <img src="images/aside-post.jpg" alt="">
+                                <span class="play-lable fa fa-video-camera"></span>
+                                <a class="position-center-center play-icon" href="http://www.youtube.com/watch?v=cH6kxtzovew" data-rel="prettyPhoto[video]"><i class="fa fa-video-camera"></i></a>
+                            </div>
+                            <!-- Post Img -->
+
+                            <!-- Post Detail -->
+                            <div class="large-post-detail">
+                                <h2>Somehow there wa enough distaste presumption of it) to</h2>
+                                <span class="red-color">22 Feb, 2016</span>
+                            </div>
+                            <!-- Post Detail -->
+
+                        </div>
+                    </div>
+                    <!-- Aside Widget -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <h3><span>Archive</span></h3>
+                        <div id="calendar" class="calendar"></div>
+                    </div>
+                    <!-- Aside Widget -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <h3><span>Tag clouds</span></h3>
+                        <div class="tag-clouds">
+                            <ul>
+                                <li><a href="#">Scores</a></li>
+                                <li><a href="#">transfers</a></li>
+                                <li><a href="#">teams</a></li>
+                                <li><a href="#">cups</a></li>
+                                <li><a href="#">All News</a></li>
+                                <li><a href="#">Photos</a></li>
+                                <li><a href="#">Videos</a></li>
+                                <li><a href="#">match</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Aside Widget -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <h3><span>instgram</span></h3>
+                        <div class="instgram-writer">
+                            <img src="images/instgram-imgs/instgram-writer.jpg" alt="">
+                            <p>@domainnamein spiration from all over the world</p>
+                        </div>
+                        <div class="instgram-imgs">
+                            <ul>
+                                <li><a href="#"><img src="images/instgram-imgs/img-01.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/instgram-imgs/img-02.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/instgram-imgs/img-03.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/instgram-imgs/img-04.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/instgram-imgs/img-05.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/instgram-imgs/img-06.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/instgram-imgs/img-07.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/instgram-imgs/img-08.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Aside Widget -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <h3><span>Tweet</span></h3>
+                        <div class="twitter-list">
+                            <ul>
+                                <li>
+                                    <h5><a href="#"><i class="fa fa-twitter"></i>Dhiren Adesara</a></h5>
+                                    <p>Just posted an unbeliveably amazing sketch to make you feel sad about your skills <i>@dribble-drbl.in/efzh</i></p>
+                                </li>
+                                <li>
+                                    <h5><a href="#"><i class="fa fa-twitter"></i>Dhiren Adesara</a></h5>
+                                    <p>Just posted an unbeliveably amazing sketch to make you feel sad about your skills <i>@dribble-drbl.in/efzh</i></p>
+                                </li>
+                                <li>
+                                    <h5><a href="#"><i class="fa fa-twitter"></i>Dhiren Adesara</a></h5>
+                                    <p>Just posted an unbeliveably amazing sketch to make you feel sad about your skills <i>@dribble-drbl.in/efzh</i></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Aside Widget -->
+
+                    <!-- Aside Widget -->
+                    <div class="aside-widget">
+                        <a href="#"><img src="images/adds.jpg" alt=""></a>
+                    </div>
+                    <!-- Aside Widget -->
+
+                </div>
+                <!-- Aside -->
+
+                <!-- Blog Content -->
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-7 r-full-width">
+
+                    <!-- Larg Blog View -->
+                    <div class="blog-lagre-view theme-padding-bottom">
+
+                        <!-- Post Img -->
+                        <div class="large-post theme-padding-bottom">
+
+                            <!-- Post Img -->
+                            <div class="large-post-img">
+                                {% image '@AppBundle/Resources/public/images/blog/img-01.jpg'  output="images/blog/img-01.jpg" %}
+                                <img title="blog/img-01.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <span class="blog-title-batch">Major League Socer</span>
+                            </div>
+                            <!-- Post Img -->
+
+                            <!-- Detail -->
+                            <div class="large-post-detail">
+                                <div class="author-header">
+                                    <div class="aurhor-img-name pull-left">
+                                        {% image '@AppBundle/Resources/public/images/aurthor-img.jpg'  output="images/aurthor-img.jpg" %}
+                                        <img title="aurthor-img.jpg" src="{{ asset_url }}" />
+                                        {% endimage %}
+                                        <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                        <span>on Jun 27, 2014 </span>
+                                    </div>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn1"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon1" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2><a href="#">Kurdish club faces sanctions from Turkey over ideological propaganda</a></h2>
+                                <p>World CupInternational Club football teamSpanish LeagueReal Madrid Vs Barcelona SpanishNext MatchThe Match Result UpdateWorld CUPFIFA World CUP 2015International Club football teamEngland30 Jun 10:24FranceReal Madrid Vs Barcelona SpanishManchester City30 Nov 00:00Manchester.</p>
+                                <a class="btn gary-btn" href="#"><i>+</i>read more</a>
+                            </div>
+                            <!-- Detail -->
+
+                        </div>
+                        <!-- Post Img -->
+
+                        <!-- Post Video -->
+                        <div class="large-post">
+
+                            <!-- Post Img -->
+                            <div class="large-post-img video-post">
+                                <img src="images/blog/img-02.jpg" alt="">
+                                <span class="play-lable fa fa-video-camera"></span>
+                                <a class="position-center-center play-icon" href="http://www.youtube.com/watch?v=cH6kxtzovew" data-rel="prettyPhoto[video]"><i class="fa fa-video-camera"></i></a>
+                            </div>
+                            <!-- Post Img -->
+
+                            <!-- Detail -->
+                            <div class="large-post-detail">
+                                <div class="author-header">
+                                    <div class="aurhor-img-name pull-left">
+                                        <img src="images/aurthor-img.jpg" alt="">
+                                        <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                        <span>on Jun 27, 2014 </span>
+                                    </div>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn2"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon2" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2><a href="#">Kurdish club faces sanctions from Turkey over ideological propaganda</a></h2>
+                                <p>World CupInternational Club football teamSpanish LeagueReal Madrid Vs Barcelona SpanishNext MatchThe Match Result UpdateWorld CUPFIFA World CUP 2015International Club football teamEngland30 Jun 10:24FranceReal Madrid Vs Barcelona SpanishManchester City30 Nov 00:00Manchester.</p>
+                                <a class="btn gary-btn" href="#"><i>+</i>read more</a>
+                            </div>
+                            <!-- Detail -->
+
+                        </div>
+                        <!-- Post Video -->
+
+                    </div>
+                    <!-- Larg Blog View -->
+
+                    <!-- Blog List View -->
+                    <div class="blog-list-View theme-padding-bottom">
+
+                        <!-- Slider Post -->
+                        <div class="theme-padding-bottom">
+                            <div class="row">
+
+                                <!-- Post Img -->
+                                <div class="col-lg-5 col-md-5 col-xs-12">
+                                    <ul id="post-slider" class="post-slider">
+                                        <li class="large-post-img">
+                                            <img src="images/blog-list-view/img-01.jpg" alt="">
+                                            <span class="blog-title-batch">Feature</span>
+                                        </li>
+                                        <li class="large-post-img">
+                                            <img src="images/blog-list-view/img-01.jpg" alt="">
+                                            <span class="blog-title-batch">Feature</span>
+                                        </li>
+                                        <li class="large-post-img">
+                                            <img src="images/blog-list-view/img-01.jpg" alt="">
+                                            <span class="blog-title-batch">Feature</span>
+                                        </li>
+                                        <li class="large-post-img">
+                                            <img src="images/blog-list-view/img-01.jpg" alt="">
+                                            <span class="blog-title-batch">Feature</span>
+                                        </li>
+                                        <li class="large-post-img">
+                                            <img src="images/blog-list-view/img-01.jpg" alt="">
+                                            <span class="blog-title-batch">Feature</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="col-lg-7 col-md-5 col-xs-12">
+                                    <div class="large-post-detail style-2">
+                                        <div class="author-header">
+                                            <div class="aurhor-img-name pull-left">
+                                                <img src="images/aurthor-img.jpg" alt="">
+                                                <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                                <span>on Jun 27, 2014 </span>
+                                            </div>
+                                            <div class="share-option pull-right">
+                                                <span id="share-btn3"><i class="fa fa-share-alt"></i>Share</span>
+                                                <div id="show-social-icon3" class="on-hover-share">
+                                                    <ul class="social-icons">
+                                                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                        <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2><a href="#">Sydney derby takes centre stage while Tim Cahill says no to A-League</a></h2>
+                                        <p>This weekend demonstrates it. Each of the six of the capital's Premier League clubs are still in the FA Cup. While that is not all that bizarre, what is distinctive this time is that those.</p>
+                                        <a class="btn gary-btn" href="#"><i>+</i>read more</a>
+                                    </div>
+                                </div>
+                                <!-- Post Detail -->
+
+                            </div>
+                        </div>
+                        <!-- Slider Post -->
+
+                        <!-- Video Post -->
+                        <div class="theme-padding-bottom">
+                            <div class="row">
+
+                                <!-- Post Img -->
+                                <div class="col-lg-5 col-md-5 col-xs-12">
+                                    <div class="large-post-img video-post">
+                                        <img src="images/blog-list-view/img-02.jpg" alt="">
+                                        <span class="play-lable fa fa-video-camera"></span>
+                                        <a class="position-center-center play-icon" href="http://www.youtube.com/watch?v=cH6kxtzovew" data-rel="prettyPhoto[video]"><i class="fa fa-video-camera"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="col-lg-7 col-md-5 col-xs-12">
+                                    <div class="large-post-detail style-2">
+                                        <div class="author-header">
+                                            <div class="aurhor-img-name pull-left">
+                                                <img src="images/aurthor-img.jpg" alt="">
+                                                <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                                <span>on Jun 27, 2014 </span>
+                                            </div>
+                                            <div class="share-option pull-right">
+                                                <span id="share-btn4"><i class="fa fa-share-alt"></i>Share</span>
+                                                <div id="show-social-icon4" class="on-hover-share">
+                                                    <ul class="social-icons">
+                                                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                        <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2><a href="#">Sydney derby takes centre stage while Tim Cahill says no to A-League</a></h2>
+                                        <p>This weekend demonstrates it. Each of the six of the capital's Premier League clubs are still in the FA Cup. While that is not all that bizarre, what is distinctive this time is that those.</p>
+                                        <a class="btn gary-btn" href="#"><i>+</i>read more</a>
+                                    </div>
+                                </div>
+                                <!-- Post Detail -->
+
+                            </div>
+                        </div>
+                        <!-- Video Post -->
+
+                        <!-- Img Post -->
+                        <div class="theme-padding-bottom">
+                            <div class="row">
+
+                                <!-- Post Img -->
+                                <div class="col-lg-5 col-md-5 col-xs-12">
+                                    <div class="large-post-img">
+                                        <img src="images/blog-list-view/img-03.jpg" alt="">
+                                        <span class="blog-title-batch">Major League Socer</span>
+                                    </div>
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="col-lg-7 col-md-5 col-xs-12">
+                                    <div class="large-post-detail style-2">
+                                        <div class="author-header">
+                                            <div class="aurhor-img-name pull-left">
+                                                <img src="images/aurthor-img.jpg" alt="">
+                                                <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                                <span>on Jun 27, 2014 </span>
+                                            </div>
+                                            <div class="share-option pull-right">
+                                                <span id="share-btn5"><i class="fa fa-share-alt"></i>Share</span>
+                                                <div id="show-social-icon5" class="on-hover-share">
+                                                    <ul class="social-icons">
+                                                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                        <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2><a href="#">Sydney derby takes centre stage while Tim Cahill says no to A-League</a></h2>
+                                        <p>This weekend demonstrates it. Each of the six of the capital's Premier League clubs are still in the FA Cup. While that is not all that bizarre, what is distinctive this time is that those.</p>
+                                        <a class="btn gary-btn" href="#"><i>+</i>read more</a>
+                                    </div>
+                                </div>
+                                <!-- Post Detail -->
+
+                            </div>
+                        </div>
+                        <!-- Img Post -->
+
+                        <!-- Pagination -->
+                        <div class="pagination-holder">
+                            <ul class="pagination">
+                                <li><a href="#"><i class="fa fa-angle-double-left"></i>Previous</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                                <li><a href="#">28</a></li>
+                                <li><a href="#">Next<i class="fa fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Pagination -->
+
+                    </div>
+                    <!-- Blog List View -->
+
+                    <!-- Blog Grid View -->
+                    <div class="blog-grid-view">
+                        <div class="row">
+
+                            <!-- Post Img -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img">
+                                    <img src="images/blog-grid-view/img-01.jpg" alt="">
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup</span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn6"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon6" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Img -->
+
+                            <!-- Post Video -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img video-post">
+                                    <img src="images/blog-grid-view/img-02.jpg" alt="">
+                                    <span class="play-lable fa fa-video-camera"></span>
+                                    <a class="position-center-center play-icon" href="http://www.youtube.com/watch?v=cH6kxtzovew" data-rel="prettyPhoto[video]"><i class="fa fa-video-camera"></i></a>
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup </span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn7"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon7" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Video -->
+
+                            <!-- Post Img -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img">
+                                    <img src="images/blog-grid-view/img-03.jpg" alt="">
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup </span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn8"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon8" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Img -->
+
+                        </div>
+                    </div>
+                    <!-- Blog Grid View -->
+
+                </div>
+                <!-- Blog Content -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Blog -->
+{% endblock %}
