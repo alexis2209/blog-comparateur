@@ -1,0 +1,340 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block breadcrumbs %}
+    <!-- Page Heading & Breadcrumbs  -->
+    <div class="page-heading-breadcrumbs">
+        <div class="container">
+            <h2>Blog</h2>
+            <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li>Blog</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Page Heading & Breadcrumbs  -->
+{% endblock %}
+
+{% block content %}
+    <!-- Blog -->
+    <div class="theme-padding white-bg">
+        <div class="container">
+            <div class="row">
+
+
+
+                <!-- Blog Content -->
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 r-full-width">
+
+                    <!-- Blog detail -->
+                    <div class="blog-detail-holder">
+                        <div class="author-header">
+                            <h2>London's calling. It's telling you that the capital of England is the centre of Premier</h2>
+                            <div class="aurhor-img-name pull-left">
+                                {% image '@AppBundle/Resources/public/images/aurthor-img.jpg'  output="images/aurthor-img.jpg" %}
+                                <img title="aurthor-img.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                <span>on Jun 27, 2014 </span>
+                            </div>
+                            <div class="share-option pull-right">
+                                <span id="share-btn1"><i class="fa fa-share-alt"></i>Share</span>
+                                <div id="show-social-icon1" class="on-hover-share">
+                                    <ul class="social-icons">
+                                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <article>
+                            <p>porttitor odio scelerisque platea feugiat nullam dictum eget sollicitudin justo curabitur morbi varius odio nisl. Vulputate lectus fringilla vulputate pharetra fermentum lectus potenti, lorem suscipit inceptos torquent dictum tincidunt.nec, consequat imperdiet elementum nunc neque porttitor. Neque pellentesque velit duis ultricies.</p>
+                        </article>
+                        <div class="blog-detail">
+                            <figure>
+                                <img title="" src="{{ thumbnail.getGuid() }}" />
+                            </figure>
+                            <article>
+                                <p>Aptent donec imperdiet a est faucibus congue dolor pretium elementum sem, porttitor ultrices donec elementum cras pharetra iaculis venenatis at, mi vulputate vitae eu maecenas purus primis volutpat eleifend consequat nisi est viverra nec hac quam nostra, pharetra pretium magna urna blandit himenaeos pharetra, massa et luctus auctor mollis faucibus.</p>
+                                <p>Netus tempor curabitur enim est habitasse suspendisse semper sapien porttitor tellus facilisis malesuada aenean, volutpat semper ullamcorper libero nulla habitant pulvinar magna id quisque tincidunt etiam vitae blandit quam orci odio aenean nisl velit vivamus, proin elit arcu ullamcorper sociosqu tempor lorem consequat, dapibus habitasse eros suscipit neque libero nullam.Rhoncus aenean scelerisque suspendisse semper ac sed tincidunt vehicula accumsan rhoncus venenatis ultrices, at mollis tempor suscipit metus ligula luctus dictum risus senectus.
+                                    in, himenaeos vehicula eget eu viverra dictum phasellus rutrum sollicitudin mi etiam aliquam morbi sem pretium purus ut aenean rutrum.</p>
+                            </article>
+                        </div>
+                        <div class="tags-holder">
+                            <ul class="tags-list pull-left">
+                                <li><i class="fa fa-tags"></i>Tags</li>
+                                <li><a href="#">Scores</a></li>
+                                <li><a href="#">transfers</a></li>
+                                <li><a href="#">teams</a></li>
+                                <li><a href="#">cups</a></li>
+                            </ul>
+                            <ul class="social-icons pull-right">
+                                <li>Share this post</li>
+                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="next-prev-option">
+                            <a href="#" class="prev-blog pull-left">
+                                {% image '@AppBundle/Resources/public/images/blog-detail/prev-img.jpg'  output="images/blog-detail/prev-img.jpg" %}
+                                <img title="blog-detail/prev-img.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <span><i class="fa fa-angle-left"></i>Previous Post</span>
+                                <h5>Tottenham Hotspur are growing</h5>
+                                <span class="m-0">23 December 2015</span>
+                            </a>
+                            <a href="#" class="next-blog pull-right">
+                                {% image '@AppBundle/Resources/public/images/blog-detail/next-img.jpg'  output="images/blog-detail/next-img.jpg" %}
+                                <img title="blog-detail/next-img.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <span>Next Post<i class="fa fa-angle-right"></i></span>
+                                <h5>Tottenham Hotspur are growing</h5>
+                                <span class="m-0">23 December 2015</span>
+                            </a>
+                        </div>
+                        <div class="about-aurthor-holder theme-margin-bottom">
+                            <div class="about-aurthor">
+                                {% image '@AppBundle/Resources/public/images/blog-detail/aurthor.jpg'  output="images/blog-detail/aurthor.jpg" %}
+                                <img title="blog-detail/aurthor.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <h5>Taste Dictatorr <i class="red-color">Marco Bale</i></h5>
+                                <p>Id quisque cursus est volutpat lorem phasellus ut neque vivamus dolor, ornare sociosqu purus taciti erat egestas integer enim sem porta ligula semper suspendisse mi metus auctor faucibus lobortis senectus, at metus nisl ornare consectetur.</p>
+                                <span><a href="#"><i class="fa fa-twitter"></i>@marcobale #dominname</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Detail -->
+
+                    <!-- Blog Grid View -->
+                    <div class="blog-grid-view theme-padding-bottom">
+                        <h2>Related Match</h2>
+                        <div class="row">
+
+                            <!-- Post Img -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img">
+                                    {% image '@AppBundle/Resources/public/images/blog-grid-view/img-01.jpg'  output="images/blog-grid-view/img-01.jpg" %}
+                                    <img title="blog-grid-view/img-01.jpg" src="{{ asset_url }}" />
+                                    {% endimage %}
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup </span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn2"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon2" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Img -->
+
+                            <!-- Post Video -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img video-post">
+                                    {% image '@AppBundle/Resources/public/images/blog-grid-view/img-02.jpg'  output="images/blog-grid-view/img-02.jpg" %}
+                                    <img title="blog-grid-view/img-02.jpg" src="{{ asset_url }}" />
+                                    {% endimage %}
+                                    <span class="play-lable fa fa-video-camera"></span>
+                                    <a class="position-center-center play-icon" href="http://www.youtube.com/watch?v=cH6kxtzovew" data-rel="prettyPhoto[video]"><i class="fa fa-video-camera"></i></a>
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup </span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn3"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon3" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Video -->
+
+                            <!-- Post Img -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img">
+                                    {% image '@AppBundle/Resources/public/images/blog-grid-view/img-03.jpg'  output="images/blog-grid-view/img-03.jpg" %}
+                                    <img title="blog-grid-view/img-03.jpg" src="{{ asset_url }}" />
+                                    {% endimage %}
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup </span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn5"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon5" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Img -->
+
+                        </div>
+                    </div>
+                    <!-- Blog Grid View -->
+
+                    <!-- Comment Section -->
+                    <div class="comment-holder theme-padding-bottom">
+                        <h2>Latest comments</h2>
+                        <ul>
+                            <li>
+                                {% image '@AppBundle/Resources/public/images/commenter/img-01.jpg'  output="images/commenter/img-01.jpg" %}
+                                <img class="position-center-x" title="commenter/img-01.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <div class="comment-detail">
+                                    <h5><a href="#">Rachel Evans</a></h5>
+                                    <span>December 23, 2015, 10:59 am</span>
+                                    <p>Vestibulum eros rutrum suspendisse dictum commodo magna habitasse taciti tincidunt non cursus conubia accumsan, vitae dapibus cursus id tristique porta felis porttitor ante primis libero nisi arcu elementum aliquam tincidunt eros at sapien in ac himenaeos primis duis tellus.</p>
+                                    <a class="reply-btn" href="#"><i class="fa fa-reply"></i>Reply</a>
+                                </div>
+                            </li>
+                            <li class="sub-comment">
+                                <ul>
+                                    <li>
+                                        {% image '@AppBundle/Resources/public/images/commenter/img-1-1.jpg'  output="images/commenter/img-1-1.jpg" %}
+                                        <img class="position-center-x" title="commenter/img-1-1.jpg" src="{{ asset_url }}" />
+                                        {% endimage %}
+                                        <div class="comment-detail">
+                                            <h5><a href="#">Kiana Sanders</a></h5>
+                                            <span>December 23, 2015, 10:59 am</span>
+                                            <p>Vestibulum eros rutrum suspendisse dictum commodo magna habitasse taciti tincidunt non cursus conubia accumsan, vitae dapibus cursus.</p>
+                                            <a class="reply-btn" href="#"><i class="fa fa-reply"></i>Reply</a>
+                                        </div>
+                                    </li>
+                                    <li class="sub-comment">
+                                        <ul>
+                                            <li>
+                                                {% image '@AppBundle/Resources/public/images/commenter/img-2-1.jpg'  output="images/commenter/img-2-1.jpg" %}
+                                                <img class="position-center-x" title="blog/img-01.jpg" src="{{ asset_url }}" />
+                                                {% endimage %}
+                                                <div class="comment-detail">
+                                                    <h5><a href="#">Mahesh Kantariya</a></h5>
+                                                    <span>December 23, 2015, 10:59 am</span>
+                                                    <p>Vestibulum eros rutrum suspendisse dictum commodo magna habitasse taciti tincid</p>
+                                                    <a class="reply-btn" href="#"><i class="fa fa-reply"></i>Reply</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                {% image '@AppBundle/Resources/public/images/commenter/img-02.jpg'  output="images/commenter/img-02.jpg" %}
+                                <img class="position-center-x" title="commenter/img-02.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <div class="comment-detail">
+                                    <h5><a href="#">Rachel Evans</a></h5>
+                                    <span>December 23, 2015, 10:59 am</span>
+                                    <p>Vestibulum eros rutrum suspendisse dictum commodo magna habitasse taciti tincidunt non cursus conubia accumsan, vitae dapibus cursus id tristique porta felis porttitor ante primis libero nisi arcu elementum aliquam tincidunt eros at sapien in ac himenaeos primis duis tellus.</p>
+                                    <a class="reply-btn" href="#"><i class="fa fa-reply"></i>Reply</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Comment Section -->
+
+                    <!-- Leave a Reply  -->
+                    <div class="leave-a-reply">
+                        <h2>Leave a Reply</h2>
+                        <form class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Email *">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Phone">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <button class="btn red-btn full-width">Send Comments</button>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <textarea class="form-control style-d" rows="11" id="comment" placeholder="Write Comments here..."></textarea>
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Leave a Reply  -->
+
+                </div>
+                <!-- Blog Content -->
+
+                <!-- Aside -->
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 r-full-width">
+
+                    {{ render(controller('BlogBundle:Partials:menu',  {  } )) }}
+
+                </div>
+                <!-- Aside -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Blog -->
+{% endblock %}

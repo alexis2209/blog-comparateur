@@ -1,0 +1,293 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block breadcrumbs %}
+    <!-- Page Heading & Breadcrumbs  -->
+    <div class="page-heading-breadcrumbs">
+        <div class="container">
+            <h2>{{ category.getTerm().getName() }}</h2>
+            <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li>{{ category.getTerm().getName() }}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Page Heading & Breadcrumbs  -->
+{% endblock %}
+
+{% block content %}
+    <!-- Blog -->
+    <div class="theme-padding white-bg">
+        <div class="container">
+            <div class="row">
+
+                <!-- Blog Content -->
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 r-full-width">
+
+                    <!-- Larg Blog View -->
+                    <div class="blog-lagre-view theme-padding-bottom">
+
+                        <!-- Post Img -->
+                        <div class="large-post theme-padding-bottom">
+
+                            <!-- Post Img -->
+                            <div class="large-post-img">
+                                {% image '@AppBundle/Resources/public/images/blog/img-01.jpg'  output="images/blog/img-01.jpg" %}
+                                <img title="blog/img-01.jpg" src="{{ asset_url }}" />
+                                {% endimage %}
+                                <span class="blog-title-batch">Major League Socer</span>
+                            </div>
+                            <!-- Post Img -->
+
+                            <!-- Detail -->
+                            <div class="large-post-detail">
+                                <div class="author-header">
+                                    <div class="aurhor-img-name pull-left">
+                                        {% image '@AppBundle/Resources/public/images/aurthor-img.jpg'  output="images/aurthor-img.jpg" %}
+                                        <img title="aurthor-img.jpg" src="{{ asset_url }}" />
+                                        {% endimage %}
+                                        <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                        <span>on Jun 27, 2014 </span>
+                                    </div>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn1"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon1" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2><a href="{{ path('article_' ~ posts|first.getSlug(),{'postId':posts|first.getId() }) }}">{{ posts|first.getTitle()|raw }}</a></h2>
+                                <p>{{ posts|first.getContent()|raw[:200] }}</p>
+                                <a class="btn gary-btn" href="{{ path('article_' ~ posts|first.getSlug(),{'postId':posts|first.getId() }) }}"><i>+</i>read more</a>
+                            </div>
+                            <!-- Detail -->
+
+                        </div>
+                        <!-- Post Img -->
+
+                    </div>
+                    <!-- Larg Blog View -->
+
+                    <!-- Blog List View -->
+                    <div class="blog-list-View theme-padding-bottom">
+
+                        {% for post in posts|slice(1, posts|length) %}
+                            <!-- Img Post -->
+                            <div class="theme-padding-bottom">
+
+                                <div class="row">
+
+                                    <!-- Post Img -->
+                                    <div class="col-lg-5 col-md-5 col-xs-12">
+                                        <div class="large-post-img">
+                                            {% image '@AppBundle/Resources/public/images/blog-list-view/img-03.jpg'  output="images/blog-list-view/img-03.jpg" %}
+                                            <img title="blog-list-view/img-03.jpg" src="{{ asset_url }}" />
+                                            {% endimage %}
+                                            <span class="blog-title-batch">Major League Socer</span>
+                                        </div>
+                                    </div>
+                                    <!-- Post Img -->
+
+                                    <!-- Post Detail -->
+                                    <div class="col-lg-7 col-md-5 col-xs-12">
+                                        <div class="large-post-detail style-2">
+                                            <div class="author-header">
+                                                <div class="aurhor-img-name pull-left">
+                                                    {% image '@AppBundle/Resources/public/images/aurthor-img.jpg'  output="images/aurthor-img.jpg" %}
+                                                    <img title="aurthor-img.jpg" src="{{ asset_url }}" />
+                                                    {% endimage %}
+                                                    <strong>by <i class="red-color">George Kvasnikov</i></strong>
+                                                    <span>on Jun 27, 2014 </span>
+                                                </div>
+                                                <div class="share-option pull-right">
+                                                    <span id="share-btn5"><i class="fa fa-share-alt"></i>Share</span>
+                                                    <div id="show-social-icon5" class="on-hover-share">
+                                                        <ul class="social-icons">
+                                                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                            <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h2><a href="{{ path('article_' ~ post.getSlug(),{'postId':post.getId() }) }}">{{ post.getTitle()|raw }}</a></h2>
+                                            <p>{{ post.getContent()|raw[:200] }}</p>
+                                            <a class="btn gary-btn" href="{{ path('article_' ~ post.getSlug(),{'postId':post.getId() }) }}"><i>+</i>read more</a>
+                                        </div>
+                                    </div>
+                                    <!-- Post Detail -->
+
+                                </div>
+
+
+                            </div>
+                            <!-- Img Post -->
+                        {% endfor %}
+
+
+
+                        <!-- Pagination -->
+                        <div class="pagination-holder">
+                            <ul class="pagination">
+                                <li><a href="#"><i class="fa fa-angle-double-left"></i>Previous</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                                <li><a href="#">28</a></li>
+                                <li><a href="#">Next<i class="fa fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Pagination -->
+
+                    </div>
+                    <!-- Blog List View -->
+
+                    <!-- Blog Grid View -->
+                    <div class="blog-grid-view">
+                        <div class="row">
+
+                            <!-- Post Img -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img">
+                                    {% image '@AppBundle/Resources/public/images/blog-grid-view/img-01.jpg'  output="images/blog-grid-view/img-01.jpg" %}
+                                    <img title="blog-grid-view/img-01.jpg" src="{{ asset_url }}" />
+                                    {% endimage %}
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup</span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn6"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon6" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Img -->
+
+                            <!-- Post Video -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img video-post">
+                                    {% image '@AppBundle/Resources/public/images/blog-grid-view/img-02.jpg'  output="images/blog-grid-view/img-02.jpg" %}
+                                    <img title="blog-grid-view/img-02.jpg" src="{{ asset_url }}" />
+                                    {% endimage %}
+                                    <span class="play-lable fa fa-video-camera"></span>
+                                    <a class="position-center-center play-icon" href="http://www.youtube.com/watch?v=cH6kxtzovew" data-rel="prettyPhoto[video]"><i class="fa fa-video-camera"></i></a>
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup </span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn7"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon7" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Video -->
+
+                            <!-- Post Img -->
+                            <div class="col-lg-4 col-xs-12">
+
+                                <!-- Post Img -->
+                                <div class="large-post-img">
+                                    {% image '@AppBundle/Resources/public/images/blog-grid-view/img-03.jpg'  output="images/blog-grid-view/img-03.jpg" %}
+                                    <img title="blog-grid-view/img-03.jpg" src="{{ asset_url }}" />
+                                    {% endimage %}
+                                </div>
+                                <!-- Post Img -->
+
+                                <!-- Post Detail -->
+                                <div class="large-post-detail style-3">
+                                    <span class="red-color">Englis FA Cup </span>
+                                    <h2><a href="#">Man United reunion for Ibrahimovic, Mourinho Klopp plots</a></h2>
+                                </div>
+                                <!-- Post Detail -->
+
+                                <!-- Post Detail Bottom -->
+                                <div class="detail-btm">
+                                    <span>on Jun 27, 2014 </span>
+                                    <div class="share-option pull-right">
+                                        <span id="share-btn8"><i class="fa fa-share-alt"></i>Share</span>
+                                        <div id="show-social-icon8" class="on-hover-share">
+                                            <ul class="social-icons">
+                                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Post Detail Bottom -->
+
+                            </div>
+                            <!-- Post Img -->
+
+                        </div>
+                    </div>
+                    <!-- Blog Grid View -->
+
+                </div>
+                <!-- Blog Content -->
+
+                <!-- Aside -->
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 r-full-width">
+
+                    {{ render(controller('BlogBundle:Partials:menu',  {  } )) }}
+
+                </div>
+                <!-- Aside -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Blog -->
+{% endblock %}

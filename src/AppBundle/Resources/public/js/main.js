@@ -390,7 +390,7 @@ jQuery(document).ready(function($) {
     // ---------- Wow Animation ---------- //
 
     // ------- Event Google Map ------- // 
-    jQuery("#custom-map").gmap3({
+    /*jQuery("#custom-map").gmap3({
       map:{
         options:{
           center:[46.578498,2.457275],
@@ -398,7 +398,7 @@ jQuery(document).ready(function($) {
           scrollwheel: false
         }
       }
-    });
+    });*/
     // ------- Event Google Map ------- //
 
     // ------- Auto height function ------- //

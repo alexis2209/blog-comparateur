@@ -1,0 +1,204 @@
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <h3><span>Top Categories</span></h3>
+    <div class="top-categories">
+        <ul>
+            {% for category in categorys %}
+                <li><a href="{{ path('category_' ~ category.getTerm().getSlug(),{'categoryId':category.getId() }) }}">{{ category.getTerm().getName() }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<!-- Aside Widget -->
+
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <h3><span>Popular News</span></h3>
+    <div class="Popular-news">
+        <ul>
+            <li>
+                {% image '@AppBundle/Resources/public/images/popular-news/img-01.jpg'  output="images/popular-news/img-01.jpg" %}
+                <img title="popular-news/img-01.jpg" src="{{ asset_url }}" />
+                {% endimage %}
+                <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+            </li>
+            <li>
+                {% image '@AppBundle/Resources/public/images/popular-news/img-02.jpg'  output="images/popular-news/img-02.jpg" %}
+                <img title="popular-news/img-02.jpg" src="{{ asset_url }}" />
+                {% endimage %}
+                <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+            </li>
+            <li>
+                {% image '@AppBundle/Resources/public/images/popular-news/img-03.jpg'  output="images/popular-news/img-03.jpg" %}
+                <img title="popular-news/img-03.jpg" src="{{ asset_url }}" />
+                {% endimage %}
+                <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+            </li>
+            <li>
+                {% image '@AppBundle/Resources/public/images/popular-news/img-04.jpg'  output="images/popular-news/img-04.jpg" %}
+                <img title="popular-news/img-04.jpg" src="{{ asset_url }}" />
+                {% endimage %}
+                <h5><a href="#">Two touch penalties, imaginary cards</a></h5>
+                <span class="red-color"><i class="fa fa-clock-o"></i>22 Feb, 2016</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Aside Widget -->
+
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <div class="aside-post">
+
+        <!-- Post Img -->
+        <div class="large-post-img video-post">
+            {% image '@AppBundle/Resources/public/images/aside-post.jpg'  output="images/aside-post.jpg" %}
+            <img title="aside-post.jpg" src="{{ asset_url }}" />
+            {% endimage %}
+            <span class="play-lable fa fa-video-camera"></span>
+            <a class="position-center-center play-icon" href="http://www.youtube.com/watch?v=cH6kxtzovew" data-rel="prettyPhoto[video]"><i class="fa fa-video-camera"></i></a>
+        </div>
+        <!-- Post Img -->
+
+        <!-- Post Detail -->
+        <div class="large-post-detail">
+            <h2>Somehow there wa enough distaste presumption of it) to</h2>
+            <span class="red-color">22 Feb, 2016</span>
+        </div>
+        <!-- Post Detail -->
+
+    </div>
+</div>
+<!-- Aside Widget -->
+
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <h3><span>Archive</span></h3>
+    <div id="calendar" class="calendar"></div>
+</div>
+<!-- Aside Widget -->
+
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <h3><span>Tag clouds</span></h3>
+    <div class="tag-clouds">
+        <ul>
+            <li><a href="#">Scores</a></li>
+            <li><a href="#">transfers</a></li>
+            <li><a href="#">teams</a></li>
+            <li><a href="#">cups</a></li>
+            <li><a href="#">All News</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">match</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Aside Widget -->
+
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <h3><span>instgram</span></h3>
+    <div class="instgram-writer">
+        {% image '@AppBundle/Resources/public/images/flags/img-02.jpg'  output="images/flags/img-02.jpg" %}
+        <img title="flags/img-02.jpg" src="{{ asset_url }}" />
+        {% endimage %}
+        <p>@domainnamein spiration from all over the world</p>
+    </div>
+    <div class="instgram-imgs">
+        <ul>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-01.jpg'  output="images/instgram-imgs/img-01.jpg" %}
+                    <img title="instgram-imgs/img-01.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-02.jpg'  output="images/instgram-imgs/img-02.jpg" %}
+                    <img title="instgram-imgs/img-02.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-03.jpg'  output="images/instgram-imgs/img-03.jpg" %}
+                    <img title="instgram-imgs/img-03.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-04.jpg'  output="images/instgram-imgs/img-04.jpg" %}
+                    <img title="instgram-imgs/img-04.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-05.jpg'  output="images/instgram-imgs/img-05.jpg" %}
+                    <img title="instgram-imgs/img-05.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-06.jpg'  output="images/instgram-imgs/img-06.jpg" %}
+                    <img title="instgram-imgs/img-06.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-07.jpg'  output="images/instgram-imgs/img-07.jpg" %}
+                    <img title="instgram-imgs/img-07.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% image '@AppBundle/Resources/public/images/instgram-imgs/img-08.jpg'  output="images/instgram-imgs/img-08.jpg" %}
+                    <img title="instgram-imgs/img-08.jpg" src="{{ asset_url }}" />
+                    {% endimage %}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Aside Widget -->
+
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <h3><span>Tweet</span></h3>
+    <div class="twitter-list">
+        <ul>
+            <li>
+                <h5><a href="#"><i class="fa fa-twitter"></i>Dhiren Adesara</a></h5>
+                <p>Just posted an unbeliveably amazing sketch to make you feel sad about your skills <i>@dribble-drbl.in/efzh</i></p>
+            </li>
+            <li>
+                <h5><a href="#"><i class="fa fa-twitter"></i>Dhiren Adesara</a></h5>
+                <p>Just posted an unbeliveably amazing sketch to make you feel sad about your skills <i>@dribble-drbl.in/efzh</i></p>
+            </li>
+            <li>
+                <h5><a href="#"><i class="fa fa-twitter"></i>Dhiren Adesara</a></h5>
+                <p>Just posted an unbeliveably amazing sketch to make you feel sad about your skills <i>@dribble-drbl.in/efzh</i></p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Aside Widget -->
+
+<!-- Aside Widget -->
+<div class="aside-widget">
+    <a href="#">
+        {% image '@AppBundle/Resources/public/images/adds.jpg'  output="images/adds.jpg" %}
+        <img title="adds.jpg" src="{{ asset_url }}" />
+        {% endimage %}
+    </a>
+</div>
+<!-- Aside Widget -->
